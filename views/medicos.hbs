@@ -1,0 +1,30 @@
+<h1>CENTRO MEDICO VETERINARIO BACKEND</h1>
+<h2>LISTADO DE MEDICOS VETERINARIOS</h2>
+<table>
+<thead>
+    <tr>
+        <th>Cedula</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Especialidad</th>
+        <th>Consultorio</th>
+        <th>Correo</th>
+        <th>Opciones</th>
+    </tr>
+</thead>
+<tbody>
+    {{#each medicos}}
+    <tr>
+        <td>{{cedula}}</td>
+        <td>{{nombres}}</td>
+        <td>{{apellidos}}</td>
+        <td>{{especialidad}}</td>
+        <td>{{consultorio}}</td>
+        <td>{{correo}}</td>
+        <td><a href="/medicos/eliminar/{{cedula}}">Eliminar</a></td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>
+<a class="volver" href="/">Volver</a>
+<a href="medicos/agregar-medico">Agregar medico</a>

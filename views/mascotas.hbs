@@ -1,0 +1,37 @@
+<h1>CENTRO MEDICO VETERINARIO BACKEND</h1>
+<h2>LISTADO DE MASCOTAS</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nombre del dueño</th>
+            <th>Nombre de la mascota</th>
+            <th>Cédula del dueño</th>
+            <th>Edad de la mascota</th>
+            <th>Teléfono del dueño</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each mascotas}}
+        <tr>
+            <form action="/mascotas/actualizar/{{cedula_duenio}}" method="post">
+            <td><input type="text" id="mascota" name="mascota" value="{{nombre}}" {{#ifCond @key '!=' ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
+            <td><input type="text" id="duenio" name="duenio" value="{{nombre_duenio}}" {{#ifCond @key '!=' ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
+            <td><input type="text" value="{{cedula_duenio}}" disabled></td>
+            <td><input type="text" id="edad" name="edad" value="{{edad}}" {{#ifCond @key '!=' ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
+            <td><input type="tel" id="telefono" name="telefono" value="{{telefono_duenio}}" {{#ifCond @key '!=' ../claveSeleccionada}}{{../opcion}}{{/ifCond}}></td>
+            <td>
+            {{#if ../estado}}
+            <a href="/mascotas/eliminar/{{cedula_duenio}}">Eliminar</a> <br><br>
+            <a href="/mascotas/enviar/{{@key}}">Actualizar</a>
+            {{else}}
+            <input type="submit" value="Enviar">
+            {{/if}}
+            </td>
+            </form>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<a class="volver" href="/">Volver</a>
+<a href="mascotas/agregar-mascota">Agregar mascota</a>

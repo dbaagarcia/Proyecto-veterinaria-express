@@ -1,0 +1,28 @@
+<h1>CENTRO MEDICO VETERINARIO BACKEND</h1>
+<h2>LISTADO DE CITAS VETERINARIAS</h2>
+<table>
+<thead>
+    <tr>
+        <th>Nombre mascota</th>
+        <th>Cedula dueño</th>
+        <th>Nombre medico</th>
+        <th>Consultorio</th>
+        <th>Fecha</th>
+        <th>Opciones</th>
+    </tr>
+</thead>
+<tbody>
+    {{#each citas}}
+    <tr>
+        <td>{{nombre}}</td>
+        <td>{{id_mascota}}</td>
+        <td>{{nombres}} {{apellidos}}</td>
+        <td>{{consultorio}}</td>
+        <td>{{formatoFecha fecha}}</td>
+        <td><a href="/citas/eliminar/{{id}}">Eliminar</a></td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>
+<a class="volver" href="/">Volver</a>
+<a href="citas/agregar-cita">Nueva cita</a>

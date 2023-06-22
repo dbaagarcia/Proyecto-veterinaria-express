@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Veterinaria</title>
+    <link rel="stylesheet" href="/stylesheets/style-formulario.css">
+</head>
+
+<body>
+    <header>
+        <h1>CENTRO MEDICO VETERINARIO BACKEND</h1>
+    </header>
+    <main>
+        <form action="./agregar" method="post">
+            <h2>REGISTRO DE MASCOTAS</h2>
+            <label for="mascota">Nombre de la mascota:<span> *</span></label>
+            <input type="text" id="mascota" name="mascota" required><br>
+            <label for="duenio">Nombre del dueño:<span> *</span></label>
+            <input type="text" id="duenio" name="duenio" required><br>
+            <label for="cedula">Cedula del dueño:<span> *</span></label>
+            <input type="text" id="cedula" name="cedula" required><br>
+            <label for="edad">Edad de la mascota:<span> *</span></label>
+            <input type="number" id="edad" name="edad" required><br>
+            <label for="telefono">Telefono del dueño:<span> *</span></label>
+            <input type="tel" id="telefono" name="telefono" required><br>
+            <input type="submit" value="Enviar">
+        </form>
+        <a class="volver" href="/mascotas">Volver</a>
+    </main>
+</body>
+
+</html>

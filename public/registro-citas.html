@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Veterinaria</title>
+    <link rel="stylesheet" href="/stylesheets/style-formulario.css">
+</head>
+
+<body>
+    <header>
+        <h1>CENTRO MEDICO VETERINARIO BACKEND</h1>
+    </header>
+    <main>
+        <form action="./agregar" method="post">
+            <h2>CITA MEDICA</h2>
+            <label for="cedula">Número de Cédula:<span> *</span></label>
+            <input type="text" id="cedula" name="cedula" required><br>
+            <label for="fecha">Fecha:<span> *</span></label>
+            <input type="date" id="fecha" name="fecha" required><br>
+            <label for="especialidad">Especialidad requerida:<span> *</span></label>
+            <select id="especialidad" name="especialidad" required>
+                <option value="">------------------------ Seleccione la especialidad ---------------------</option>
+                <option value="Medicina general">Medicina general</option>
+                <option value="Medicina interna">Medicina interna</option>
+                <option value="Medicina veterinaria preventiva">Medicina veterinaria preventiva</option>
+                <option value="Dermatología veterinaria">Dermatología veterinaria</option>
+                <option value="Cirugía veterinaria">Cirugía veterinaria</option>
+                <option value="Veterinaria conductual">Veterinaria conductual</option>
+                <option value="Odontología veterinaria">Odontología veterinaria</option>
+                <option value="Farmacología veterinaria">Farmacología veterinaria</option>
+            </select><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+</body>
+
+</html>

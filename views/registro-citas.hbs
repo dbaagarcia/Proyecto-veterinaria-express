@@ -1,0 +1,18 @@
+<h2>CITA MEDICA</h2>
+<label for="cedula">Número de Cédula:<span> *</span></label>
+<select id="cedula" name="cedula" required>
+    <option value="">------------------- Seleccione la cedula del dueño -------------------</option>
+    {{#each mascotas}}
+    <option value="{{cedula_duenio}}">{{cedula_duenio}}</option>
+    {{/each}}
+</select><br>
+<label for="fecha">Fecha:<span> *</span></label>
+<input type="date" id="fecha" name="fecha" required><br>
+<label for="especialidad">Especialidad requerida:<span> *</span></label>
+<select id="especialidad" name="especialidad" required>
+    <option value="">------------------------ Seleccione la especialidad ---------------------</option>
+    {{#each medicos}}
+    <option value="{{especialidad}}">{{especialidad}}</option>
+    {{/each}}
+</select><br>
+<a class="volver" href="/citas">Volver</a>
